@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:form="http://www.w3.org/1999/xhtml" lang="ru">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+  <body>
+  <center>
+  <h1>2.3.1 PP - Страница добавления пользователя</h1>
+  </center>
+  <br/><br/>
+  <div align="center">
+    <form action="#" th:action="@{/save}" th:object="${user}" method="post">
+      <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" th:field="*{name}" id="name" required />
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="lastname">Фамилия:</label>
+        <input type="text" th:field="*{lastName}" id="lastname" required />
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" th:field="*{email}" id="email" required />
+      </div>
+      <br />
+      <div class="form-group">
+        <input type="submit" value="Сохранить!" class="submit-button" />
+      </div>
+      <br />
+      <div class="form-group">
+      <a href="/list" class="submit-button">Вернуться назад</a>
+      </div>
+    </form>
+  </div>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7f6;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .form-example {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #fff;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #7e57c2;
+      box-shadow: 0 0 5px rgba(126, 87, 194, 0.8);
+    }
+
+    .submit-button {
+      background-color: #7e57c2;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+к
+    .submit-button:hover {
+      background-color: #5e35b1;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+  </style>
+  </body>
+</html>
+</html>
